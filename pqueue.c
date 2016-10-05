@@ -22,7 +22,7 @@ int isempty()
 		return 0;
 }
 
-int delete1()
+int delete1() // Modified Delete
 {	
 	int max,pos=0,i;
 	max=q[f];
