@@ -1,0 +1,34 @@
+Huffman Algorithm
+
+function Huffman(s,n)
+n-> no. of symbols
+s(1:n)->symbol array
+f(1:n)->frequency array
+code(1:n)->code array
+Q(1:n)-> ascending priority queue
+
+start
+initialize Q with all symbols of s
+for i=1 to n-1 do
+{
+ create a new node z
+ left(z)=x=pqmindelete(Q)
+ right(z)=y=pqmindelete(Q)
+ f(z)=f(x)+f(y)
+ insert(Q,z)
+}
+root=pqmindelete(Q)
+for i=1 to n do
+{ 
+ code(i)=""
+ p=s(i)
+ while p not equal to root do
+ {
+  if isleft(p)=true then
+   code(i)= "0" + code(i)
+  else
+   code(i)= "1" + code(i)
+  p=father(p)
+ }
+}
+return
