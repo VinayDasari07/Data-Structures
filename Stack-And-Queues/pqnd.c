@@ -11,7 +11,7 @@ void insert(int ele)
 		printf("Queue overflow\n");
 		return;
 	}
-	for(i=0;i<=r;i++)
+	for(i=f;i<=r;i++)
 	{
 		if(ele>q[i])
 			break;
